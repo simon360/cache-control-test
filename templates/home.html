@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Cache-Control Test</title>
+
+</head>
+
+<body>
+
+<h1>Cache-Control Test</h1>
+
+<p>This page was <strong>generated on the server</strong> on {{ currentDate }} at {{ currentTime }}. It took {{ delay }} seconds to render.</p>
+
+<p>It will expire on {{ expiryDate }} at {{ expiryTime }}</p>
+
+<current-time></current-time>
+
+<p>Its Cache-Control header is {{ cacheControl }}</p>
+
+<ul>
+    <li><a href="/?delay=3&maxage=10">max-age: 10</a></li>
+    <li><a href="/?delay=3&maxage=60">max-age: 60</a></li>
+    <li><a href="/?delay=3&maxage=600">max-age: 600</a></li>
+    <li><a href="/?delay=3&maxage=3600">max-age: 3600</a></li>
+</ul>
+
+<script src="/js/main.js"></script>
+
+</body>
+
+</html>
